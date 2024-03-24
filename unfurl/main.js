@@ -1,9 +1,9 @@
 import { unfurl } from "unfurl.js";
 
 async function main() {
-    const result = await unfurl("https://farhack.xyz");
+    const result = await unfurl("https://stats-frame.degen.tips/");
 
-    console.log(result.twitter_card);
+    console.log(result.open_graph);
 }
 
 main().catch((err) => {
