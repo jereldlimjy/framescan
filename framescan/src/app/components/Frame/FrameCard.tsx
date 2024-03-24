@@ -12,7 +12,6 @@ const truncateDescription = (text: string, maxLength: number) => {
 };
 
 const FrameCard = ({ data }: any) => {
-    console.log(data);
     const truncatedDescription = truncateDescription(data.description, 60);
 
     return (

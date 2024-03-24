@@ -1,10 +1,9 @@
 // pages/api/frames.ts
 import { PrismaClient } from "@prisma/client";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-// Assuming your Frame model is similar to the one described earlier
 type Frame = {
     id: number;
     fid: number;
@@ -17,8 +16,8 @@ type Frame = {
 };
 
 export async function GET(
-    req: NextApiRequest,
-    res: NextApiResponse<Frame[] | { message: string }>
+    req: NextRequest,
+    res: NextResponse<Frame[] | { message: string }>
 ) {
     const frames = await prisma.frame.findMany({
         take: 500,
