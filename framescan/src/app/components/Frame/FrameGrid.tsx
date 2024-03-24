@@ -31,7 +31,7 @@ import FrameCard from "./FrameCard";
 
 const getFrames = async () => {
     try {
-        const response = await fetch("http://localhost:3001/api/frames");
+        const response = await fetch("https://framescan.vercel.app/api/frames");
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
