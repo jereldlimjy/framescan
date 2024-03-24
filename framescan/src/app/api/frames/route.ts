@@ -1,4 +1,3 @@
-// pages/api/frames.ts
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -34,7 +33,7 @@ export async function GET(
             uniqueFrames.push(frame);
             titles.add(frame.title);
         }
-        if (uniqueFrames.length >= 500) break; // Stop once you have 500 unique titles
+        if (uniqueFrames.length >= 600) break;
     }
 
     const convertedFrames = uniqueFrames.map((frame) => ({

@@ -4,31 +4,6 @@ import { useEffect, useState } from "react";
 import Searchbar from "../Searchbar";
 import FrameCard from "./FrameCard";
 
-// const getData = async () => {
-//     const rankingResults = await fetch(
-//         "https://graph.cast.k3l.io/frames/global/rankings"
-//     );
-
-//     const urlData = await rankingResults.json();
-//     const frameDatas = [];
-
-//     for (const data of urlData.result.slice(0, 6)) {
-//         try {
-//             const result = await unfurl(data.url);
-//             const frameData = {
-//                 title: result.title,
-//                 description: result.description || "",
-//                 url: data.url || "",
-//                 imageUrl: result.open_graph?.images?.[0]?.url || "",
-//             };
-
-//             frameDatas.push(frameData);
-//         } catch (err) {}
-//     }
-
-//     return frameDatas;
-// };
-
 const getFrames = async () => {
     try {
         const response = await fetch("https://framescan.vercel.app/api/frames");
