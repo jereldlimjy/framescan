@@ -55,7 +55,7 @@ const FrameCard = ({ data, idx }: { data: any; idx?: number }) => {
                     />
                 </div>
 
-                <div className="mt-6 pb-4">
+                <div className="mt-6 pb-4 overflow-hidden">
                     <p className="text-gray-700 text-lg font-medium">
                         {data.title}
                     </p>
