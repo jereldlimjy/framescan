@@ -7,7 +7,7 @@ const cheerio = require("cheerio");
 
 dotenv.config();
 
-const csvFile = "/512599_2024_feb_20_00.csv";
+const csvFile = "/512631_2024_mar_20_curr.csv";
 
 async function main() {
     const csvData = [];
