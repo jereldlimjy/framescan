@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { format } from "date-fns";
 
 const truncateDescription = (text: string, maxLength: number) => {
     const words = text.split(" ");
@@ -37,9 +38,13 @@ const FrameCard = ({ data }: any) => {
                         {data.title}
                     </p>
                 </div>
-                <div className="flex -mb-6 py-4 border-t border-gray-200">
+                <div className="flex flex-col -mb-6 py-4 border-t border-gray-200">
                     <p className="text-gray-700 text-sm">
                         {truncatedDescription}
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1">
+                        Created on:{" "}
+                        {format(new Date(data.timestamp), "MMMM d, yyyy")}
                     </p>
                 </div>
             </Link>
